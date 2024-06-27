@@ -62,9 +62,9 @@ def save_data_to_bucket(data):
     bucket = client.get_bucket(BUCKET_NAME)
     blob = bucket.blob(TAR_STORAGE_PATH)
     with blob.open(mode='w') as f:
-        f.write("hello world!!!")
-        # for line in data:
-        #     f.write(line)
+        # f.write("hello world!!!")
+        for line in data:
+            f.write(line)
 
 def save_data_to_db(data):
     con = sqlite3.connect("PATH_TO_SQLITE_FILE")
