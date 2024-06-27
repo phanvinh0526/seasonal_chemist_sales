@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+        "name": "Deploy Cloud Function",
+        "type": "cloudcode.cloudfunctions",
+        "request": "launch",
+        "functionName": "demo-fetch-weather-data",
+        "region": "us-central1",
+        "gen": "GEN_2",
+        "revision": "demo-fetch-weather-data-00008-jif",
+        "entryPoint": "fetch_weather_data_api",
+        "runtime": "python310",
+        "testInput": ""
+    }
+]
+}

@@ -1,16 +1,20 @@
 {
+  "version": "0.2.0",
   "configurations": [
-    {
-        "name": "Deploy Cloud Function",
-        "type": "cloudcode.cloudfunctions",
-        "request": "launch",
-        "functionName": "demo-fetch-weather-data",
-        "region": "us-central1",
-        "gen": "GEN_2",
-        "revision": "demo-fetch-weather-data-00008-jif",
-        "entryPoint": "fetch_weather_data_api",
-        "runtime": "python310",
-        "testInput": ""
+        {
+            "name": "Deploy Cloud Function",
+            "type": "python",
+            "request": "launch",
+            "module": "functions_framework",
+            "args": [
+                "--target",
+                "func",
+                "--debug"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/Users/phanvinh0526/.config/gcloud/application_default_credentials.json"
     }
-]
 }
